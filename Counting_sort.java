@@ -1,8 +1,8 @@
 /**
  * @time 2019-2-20-17:36
  * @author wx
-  *《算法导论第三版》
-  *第八章：计数排序
+ *《算法导论第三版》
+ *第八章：计数排序
  */
 public class Counting_sort {
 	public static void counting_sort(int[] A,int[] B,int k) {
