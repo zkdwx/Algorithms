@@ -1,8 +1,8 @@
 /**
  * @time 2019-2-20-17:36
- * @author ÍõĞË
-  *¡¶Ëã·¨µ¼ÂÛµÚÈı°æ¡·
-  *µÚ°ËÕÂ£º¼ÆÊıÅÅĞò
+ * @author wx
+  *ã€Šç®—æ³•å¯¼è®ºç¬¬ä¸‰ç‰ˆã€‹
+  *ç¬¬å…«ç« ï¼šè®¡æ•°æ’åº
  */
 public class Counting_sort {
 	public static void counting_sort(int[] A,int[] B,int k) {
