@@ -1,11 +1,10 @@
 /**
- * 快速排序
- * 参考《算法导论》
+ * 快速排序（一般化版本）
+ * 参考《算法导论·第三版》
  * 2019-03-27
  * @author 王兴
- *
  */
-public class lab1 {
+public class lab1_01 {
 	public static void quickSort(int[] arr, int p, int r) {
 		if (p < r) {
 			int q;
