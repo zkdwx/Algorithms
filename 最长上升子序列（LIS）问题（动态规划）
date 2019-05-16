@@ -1,0 +1,28 @@
+/**
+ * 最长上升子序列（LIS）问题： 
+ * 给定长度为n的序列a，从a中抽取出一个子序列， 这个子序列需要单调递增。
+ * 问最长的上升子序列（LIS）的长度。 e.g.
+ * 1,5,3,4,6,9,7,8的LIS为1,3,4,6,7,8，长度为6。
+ * @author wx
+ */
+public class Test02 {
+	public static void main(String[] args) {
+		int[] a = new int[] { 0, 1, 5, 3, 4, 6, 9, 7, 8 };
+		int[] f = new int[100];
+		f[1] = 1;
+		int ans = 0;
+		for (int i = 1; i <= 8; i++) {
+			for (int j = 1; j < i; j++) {
+				if (a[j] < a[i]) {
+					f[i] = Math.max(f[i], f[j] + 1);
+				}
+			}
+			System.out.println("f[" + i + "]=" + f[i]);
+		}
+		for (int k = 1; k <= 8; k++)
+			ans = Math.max(ans, f[k]);
+		System.out.println(ans);
+
+	}
+
+}
