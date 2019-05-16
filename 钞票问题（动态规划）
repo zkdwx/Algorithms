@@ -1,0 +1,25 @@
+/**
+ * 钞票面额分别是1、5、11
+ * 现在我们要凑出15元，请问需要最少的钞票张数
+ * @author wx
+ *动态规划问题求解
+ */
+public class Test16 {
+	public static void main(String[] args) {
+		int[] f=new int[100];
+		f[0]=0;
+		
+		for(int i=1;i<=15;i++) {
+			int cost=100;
+			if(i-1>=0)
+				cost=Math.min(cost, f[i-1]+1);
+			if(i-5>=0)
+				cost=Math.min(cost, f[i-5]+1);
+			if(i-11>0)
+				cost=Math.min(cost, f[i-11]+1);
+			f[i]=cost;
+			System.out.println("f["+i+"]="+f[i]);
+		}
+	}
+
+}
