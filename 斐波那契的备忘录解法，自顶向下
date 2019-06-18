@@ -1,0 +1,27 @@
+package booktest;
+
+/**
+ * 斐波那契的备忘录解法，自顶向下
+ * 
+ * @author 王兴
+ *
+ */
+public class Fib1 {
+	private static int f(int n) {
+		int[] v = new int[n + 1];
+		if (n == 1 || n == 2) {
+			v[n] = 1;
+		}
+		for (int i = 3; i <= n; i++)
+			v[i] = -1;
+		if (v[n] < 0)
+			v[n] = f(n - 1) + f(n - 2);
+		return v[n];
+	}
+
+	public static void main(String[] args) {
+		int r = f(7);
+		System.out.println(r);
+	}
+
+}
