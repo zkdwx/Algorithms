@@ -1,0 +1,29 @@
+package booktest;
+
+/**
+ * 斐波那契，自底向上
+ * 
+ * @author 王兴
+ *
+ */
+public class Fib2 {
+	private static int f(int n) {
+		int[] v = new int[n + 1];
+		if (n >= 2) {
+			v[1] = 1;
+			v[2] = 1;
+		} else {
+			return 1;
+		}
+		for (int i = 3; i <= n; i++) {
+			v[i] = v[i - 1] + v[i - 2];
+		}
+		return v[n];
+	}
+
+	public static void main(String[] args) {
+		int r = f(7);
+		System.out.println(r);
+	}
+
+}
